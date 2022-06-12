@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "./styles.css";
+import { CssModules } from "./components/CssModules";
+import { StyledJsx } from "./components/StyledJsx";
+import { StyledComponents } from "./components/StyledComponents";
 import { ColoredMessage } from "./components/ColoredMessage";
 
 export default function App() {
   const [num, setNum] = useState(0);
   useEffect(() => {
-    alert();
+    // alert();
   }, [num]);
   const onClickButton = () => {
     setNum((prev) => prev + 1);
@@ -29,6 +32,9 @@ export default function App() {
       <p style={colorPink}>お元気ですよ！</p>
       <button onClick={onClickButton}>ボタン</button>
       <p>{num}</p>
+      <CssModules />
+      <StyledJsx />
+      <StyledComponents />
     </div>
   );
 }
